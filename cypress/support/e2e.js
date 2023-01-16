@@ -13,6 +13,11 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+Cypress.on('viewport:changed', (newValue) => {
+  Cypress.config('viewportWidth', newValue.viewportWidth)
+  Cypress.config('viewportHeight', newValue.viewportHeight)
+})
+
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './routes'
@@ -25,5 +30,5 @@ before(() => {
 })
 
 beforeEach(() => {
-    // Cypress commands you would like to run before every single Cypress test.
+   // Cypress commands you would like to run before every single Cypress test.
 })
