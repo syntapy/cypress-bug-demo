@@ -13,10 +13,10 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-//Cypress.on('viewport:changed', (newValue) => {
-//  Cypress.config('viewportWidth', newValue.viewportWidth)
-//  Cypress.config('viewportHeight', newValue.viewportHeight)
-//})
+Cypress.on('viewport:changed', (newValue) => {
+  Cypress.config('viewportWidth', newValue.viewportWidth)
+  Cypress.config('viewportHeight', newValue.viewportHeight)
+})
 
 // Import commands.js using ES2015 syntax:
 import './commands'
