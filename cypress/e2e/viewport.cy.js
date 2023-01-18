@@ -6,7 +6,7 @@ describe('Sample Tests', () => {
     cy.wrap(vpWidth).should('not.be.undefined')
     cy.wrap(vpHeight).should('not.be.undefined')
 
-    cy.viewport(vpWidth+100, vpHeight+100)
+    cy.setViewport(vpWidth+100, vpHeight+100)
     //Cypress.config('viewportWidth', vpWidth+100)
     //Cypress.config('viewportHeight', vpHeight+100)
 
@@ -16,7 +16,7 @@ describe('Sample Tests', () => {
     cy.wrap(vpWidthNew).should('equal', vpWidth+100)
     cy.wrap(vpHeightNew).should('equal', vpHeight+100)
 
-    cy.viewport(vpWidth, vpHeight)
+    cy.setViewport(vpWidth, vpHeight)
     //Cypress.config('viewportWidth', vpWidth)
     //Cypress.config('viewportHeight', vpHeight)
 
