@@ -3,4 +3,8 @@ Cypress.on('viewport:changed', (newValue) => {
   Cypress.config('viewportHeight', newValue.viewportHeight)
 })
 
-import './commands'
+Cypress.Commands.add('setViewport', (viewportWidth, viewportHeight) => {
+  cy.viewport(viewportWidth, viewportHeight)
+  Cypress.config('viewportWidth', viewportWidth)
+  Cypress.config('viewportHeight', viewportHeight)
+})
